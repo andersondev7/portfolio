@@ -1,0 +1,36 @@
+{
+    "header": {
+      "about": "Sobre",
+      "projects": "Projetos",
+      "skills": "Skills",
+      "contact": "Contato"
+    },
+    "main": {
+      "description": "E sou desenvolvedor full stack."
+    },
+    "about": {
+      "title": "Sobre Mim",
+      "description": "Aqui está um resumo sobre mim."
+    },
+    "projects": {
+      "title": "Projetos",
+      "project1": "Projeto 1",
+      "project1_description": "Descrição do Projeto 1.",
+      "project2": "Projeto 2",
+      "project2_description": "Descrição do Projeto 2."
+    },
+    "skills": {
+      "title": "Habilidades",
+      "skill1": "Habilidade 1",
+      "skill2": "Habilidade 2",
+      "skill3": "Habilidade 3"
+    },
+    "contact": {
+      "title": "Contato",
+      "name": "Seu Nome",
+      "email": "Seu Email",
+      "message": "Sua Mensagem",
+      "send": "Enviar"
+    }
+  }
+  
