@@ -1,39 +1,40 @@
 import React from "react";
-import { useTranslation } from "react-i18next";
-import styled from "styled-components";
 import { Link } from "react-scroll";
 
-const HeaderWrapper = styled.header`
-  background: ${({ theme }) => theme.background};
-  color: ${({ theme }) => theme.text};
-  padding: 20px;
-`;
-
-const Nav = styled.nav`
-  display: flex;
-  justify-content: space-around;
-`;
+import { Aside, ContainerImage, Nav } from "./styles";
+import { FaShareAlt } from "react-icons/fa";
 
 const Header: React.FC = () => {
-  const { t } = useTranslation();
-
   return (
-    <HeaderWrapper>
+    <Aside>
+      <ContainerImage>
+        <Link to="/" smooth={true}>
+          A
+        </Link>
+      </ContainerImage>
+
       <Nav>
         <Link to="about" smooth={true}>
-          {t("header.about")}
+          About
         </Link>
         <Link to="projects" smooth={true}>
-          {t("header.projects")}
+          Projects
+        </Link>
+        <Link to="work" smooth={true}>
+          Work
         </Link>
         <Link to="skills" smooth={true}>
-          {t("header.skills")}
+          Skills
         </Link>
         <Link to="contact" smooth={true}>
-          {t("header.contact")}
+          Contact
         </Link>
       </Nav>
-    </HeaderWrapper>
+
+      <div>
+        <FaShareAlt size={24} color="red" />
+      </div>
+    </Aside>
   );
 };
 

@@ -1,14 +1,42 @@
-import React from 'react';
-import { useTranslation } from 'react-i18next';
+import React from "react";
+
+import Title from "../../components/Title/Title";
+import ContactMe from "../../components/ContactMe/inedx";
+import Header from "../../components/Header";
+import Skills from "../../components/Skills";
+import Footer from "../../components/Footer";
+import { Container } from "./styles";
+import Projects from "../../components/Projects";
+import Experiences from "../../components/Experiences";
+import AboutMe from "../../components/AboutMe";
 
 const Home: React.FC = () => {
-  const { t } = useTranslation();
-
   return (
-    <div>
-      <h1>{t('home.welcome')}</h1>
-      <p>{t('home.description')}</p>
-    </div>
+    <>
+      <Header />
+      <Container>
+        <div id="about">
+          <AboutMe />
+        </div>
+
+        <div id="work">
+          <Experiences />
+        </div>
+
+        <div id="projects">
+          <Projects />
+        </div>
+
+        <div id="skills">
+          <Skills />
+        </div>
+
+        <div id="contact">
+          <ContactMe />
+        </div>
+      </Container>
+      <Footer />
+    </>
   );
 };
 
