@@ -1,6 +1,5 @@
 import React from "react";
 
-import Title from "../../components/Title/Title";
 import ContactMe from "../../components/ContactMe/inedx";
 import Header from "../../components/Header";
 import Skills from "../../components/Skills";

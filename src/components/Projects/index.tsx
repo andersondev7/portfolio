@@ -213,7 +213,7 @@ const Projects: React.FC = () => {
 
   return (
     <>
-      <Title titleEn="PROJETOS" titlePt="Projetos" />
+      <Title titleEn="PROJECTS" titlePt="Projetos" />
       <ButtonContainer>
         <Button active={filter === "all"} onClick={() => setFilter("all")}>
           Todos os Projetos

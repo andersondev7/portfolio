@@ -30,7 +30,7 @@ const ContactMe = () => {
 
   return (
     <>
-      <Title titleEn="Contato" titlePt="Contato" />
+      <Title titleEn="CONTACT" titlePt="Contato" />
 
       <Container>
         <ContainerCard>

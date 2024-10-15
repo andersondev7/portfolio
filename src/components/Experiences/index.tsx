@@ -116,7 +116,7 @@ const Experiences = () => {
 
   return (
     <Container>
-      <Title titleEn="EXPERIÊNCIAS" titlePt="EXPERIÊNCIAS" />
+      <Title titleEn="EXPERIENCES" titlePt="EXPERIÊNCIAS" />
 
       <TimelineContainer>
         {experiences.map((exp, index) => (

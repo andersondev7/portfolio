@@ -150,7 +150,7 @@ const SkillName = styled.div`
 const SkillsCarousel: React.FC = () => {
   return (
     <>
-      <Title titleEn="HABILIDADES" titlePt="Habilidades" />
+      <Title titleEn="SKILLS" titlePt="Habilidades" />
 
       <CarouselContainer>
         <CarouselWrapper>
