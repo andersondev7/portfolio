@@ -21,7 +21,7 @@ import logoBbankingFranquia from "../../assets/image/BbankingFranquia.png";
 import logoBbankingPagueTudo from "../../assets/image/BbankingPagueTudo.png";
 import logoBbanking from "../../assets/image/logoBbanking.png";
 import logoBbankingDash from "../../assets/image/logoBbankingDash.png";
-import logoBrightlync from "../../assets/image/logobrightlync.png";
+import logoBrightlync from "../../assets/image/logoBrightlync.png";
 import logoEnergyarray from "../../assets/image/logoEnergyarray.png";
 import logoTwella from "../../assets/image/logoTwella.png";
 
