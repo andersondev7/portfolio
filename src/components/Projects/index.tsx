@@ -23,7 +23,7 @@ import logoBbanking from "../../assets/image/logoBbanking.png";
 import logoBbankingDash from "../../assets/image/logoBbankingDash.png";
 import logoBrightlync from "../../assets/image/logoBrightlync.png";
 
-import logoEnergyarray from "../../assets/image/logoEnergyarray.png";
+import logoEnergyarray from "../../assets/image/logoTwella.png"; 
 import logoTwella from "../../assets/image/logoEnergyarray.png";
 
 interface Project {
