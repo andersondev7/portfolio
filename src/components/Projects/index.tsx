@@ -53,7 +53,7 @@ const projectsData: Project[] = [
     id: 2,
     name: "Junior Challenge",
     description:
-      "Projeto para criação de um CRUD (Create, Read, Update, Delete) para gerenciar os anéis e desenvolver um frontend para visualizar e manipular essas informações.",
+      "Projeto para Criação de um CRUD (Create, Read, Update, Delete) para gerenciar os anéis e desenvolver um frontend para visualizar e manipular essas informações.",
     technologies: "Frontend: React e TypeScript, Backend: com Node + Express",
     imageUrl: "",
     url: "https://github.com/andersona16/Junior-Challenge/tree/junior-challenge-anderson-araujo",
