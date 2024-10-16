@@ -4,16 +4,20 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  flex-wrap: wrap;
   margin: 0 auto;
   width: 100%;
   max-width: 1240px;
-  gap: 40px;
+  gap: 10px;
 `;
 
 export const ProfilePicture = styled.img`
   border-radius: 50%;
   width: 40%;
   height: auto;
+
+  padding: 0px 20px;
 
   @media (max-width: 768px) {
     width: 50%;
@@ -24,6 +28,9 @@ export const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
+
+  padding: 0px 20px;
+
   color: #fff;
 
   width: 100%;
@@ -59,12 +66,9 @@ export const Card = styled.div`
 export const ContainerCard = styled.div`
   display: flex;
   align-items: center;
-  gap: 10px;
 
-  @media (max-width: 768px) {
-    flex-direction: column;
-    align-items: stretch;
-  }
+  flex-wrap: wrap;
+  gap: 10px;
 `;
 
 export const ContainerContact = styled.div`

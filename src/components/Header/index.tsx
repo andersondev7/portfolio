@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-scroll";
 
-import { Aside, ContainerImage, Nav } from "./styles";
-import { FaShareAlt } from "react-icons/fa";
+import { Aside, ContainerImage, Hamburger, Nav } from "./styles";
 
 const Header: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => setIsOpen(!isOpen);
+
   return (
     <Aside>
       <ContainerImage>
@@ -13,27 +16,29 @@ const Header: React.FC = () => {
         </Link>
       </ContainerImage>
 
-      <Nav>
-        <Link to="about" smooth={true}>
-          About
+      <Hamburger isOpen={isOpen} onClick={toggleMenu}>
+        <span />
+        <span />
+        <span />
+      </Hamburger>
+
+      <Nav isOpen={isOpen}>
+        <Link to="about" smooth={true} onClick={() => setIsOpen(false)}>
+          Sobre mim
         </Link>
-        <Link to="projects" smooth={true}>
-          Projects
+        <Link to="projects" smooth={true} onClick={() => setIsOpen(false)}>
+          Projetos
         </Link>
-        <Link to="work" smooth={true}>
-          Work
+        <Link to="work" smooth={true} onClick={() => setIsOpen(false)}>
+          Experiência
         </Link>
-        <Link to="skills" smooth={true}>
-          Skills
+        <Link to="skills" smooth={true} onClick={() => setIsOpen(false)}>
+          Habilidades
         </Link>
-        <Link to="contact" smooth={true}>
-          Contact
+        <Link to="contact" smooth={true} onClick={() => setIsOpen(false)}>
+          Contato
         </Link>
       </Nav>
-
-      <div>
-        <FaShareAlt size={24} color="red" />
-      </div>
     </Aside>
   );
 };

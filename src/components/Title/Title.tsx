@@ -30,6 +30,18 @@ const TitleBackground = styled.h1`
   ${TitleContainer}:hover & {
     opacity: 0.3;
   }
+
+  @media (max-width: 768px) {
+    font-size: 5rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 3rem;
+  }
+
+  @media (max-width: 375px) {
+    font-size: 2.8rem;
+  }
 `;
 
 const TitleForeground = styled.h2`
@@ -37,12 +49,22 @@ const TitleForeground = styled.h2`
   z-index: 2;
   color: #a10606;
   transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
-
   margin: inherit;
 
   ${TitleContainer}:hover & {
     transform: translateY(-10px);
     color: #bdc3c7;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 3rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 2rem;
+  }
+  @media (max-width: 375px) {
+    font-size: 2rem;
   }
 `;
 

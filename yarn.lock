@@ -188,6 +188,11 @@
     "@babel/helper-validator-identifier" "^7.24.7"
     "to-fast-properties" "^2.0.0"
 
+"@emailjs/browser@^4.4.1":
+  "integrity" "sha512-DGSlP9sPvyFba3to2A50kDtZ+pXVp/0rhmqs2LmbMS3I5J8FSOgLwzY2Xb4qfKlOVHh29EAutLYwe5yuEZmEFg=="
+  "resolved" "https://registry.npmjs.org/@emailjs/browser/-/browser-4.4.1.tgz"
+  "version" "4.4.1"
+
 "@emotion/is-prop-valid@1.2.2":
   "integrity" "sha512-uNsoYd37AFmaCdXlg6EYD1KaPOaRWRByMCYzbKUX4+hhMfrxdVSelShywL4JVaAeM/eHUOSprYBQls+/neX3pw=="
   "resolved" "https://registry.npmjs.org/@emotion/is-prop-valid/-/is-prop-valid-1.2.2.tgz"

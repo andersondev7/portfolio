@@ -45,7 +45,7 @@ const AboutMe: React.FC = () => {
         </ContainerCard>
 
         <h2>Entre em Contato</h2>
-        <div style={{ display: "flex", gap: "40px" }}>
+        <div style={{ display: "flex", gap: "40px", flexWrap: "wrap" }}>
           <ContainerContact>
             <a
               href="https://www.linkedin.com/in/andersonaraujjo/"

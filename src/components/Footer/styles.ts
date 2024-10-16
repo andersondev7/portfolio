@@ -4,12 +4,18 @@ export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
 
   padding: 40px 20px;
 
   background-color: #16161d;
 
   margin-top: 40px;
+
+  @media screen and (max-width: 425px) {
+    justify-content: center;
+  }
 `;
 
 export const ContainerMe = styled.div`

@@ -6,7 +6,8 @@ export const ProjectList = styled.ul`
   gap: 20px;
   list-style: none;
   margin: 0 auto;
-  width: 80%;
+
+  padding: 0px 40px;
 `;
 
 export const ProjectItem = styled.li`
@@ -61,6 +62,8 @@ export const ContainerTechnologies = styled.div`
 export const ButtonContainer = styled.div`
   display: flex;
   justify-content: center;
+
+  flex-wrap: wrap;
 
   gap: 10px;
 `;
