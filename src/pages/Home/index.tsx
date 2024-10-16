@@ -2,7 +2,6 @@ import React from "react";
 
 import ContactMe from "../../components/ContactMe/inedx";
 import Header from "../../components/Header";
-import Skills from "../../components/Skills";
 import Footer from "../../components/Footer";
 import { Container } from "./styles";
 import Projects from "../../components/Projects";
