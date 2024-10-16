@@ -15,16 +15,16 @@ import {
 } from "./styles";
 
 import logoAgendaDf from "../../assets/image/agendaDf.png";
-import logoNahora from "../../assets/image/nahora.png";
+import logoNaHora from "../../assets/image/nahora.png";
 import logoBbankingConveniencia from "../../assets/image/bbankingConveniencia.png";
 import logoBbankingFranquia from "../../assets/image/BbankingFranquia.png";
 import logoBbankingPagueTudo from "../../assets/image/BbankingPagueTudo.png";
 import logoBbanking from "../../assets/image/logoBbanking.png";
 import logoBbankingDash from "../../assets/image/logoBbankingDash.png";
 import logoBrightlync from "../../assets/image/logoBrightlync.png";
-import logoTwella from "../../assets/image/logoTwella.png";
 
 import logoEnergyarray from "../../assets/image/logoEnergyarray.png";
+import logoTwella from "../../assets/image/logoEnergyarray.png";
 
 interface Project {
   id: number;
@@ -98,7 +98,7 @@ const projectsData: Project[] = [
     description:
       "Efetuei ajustes e melhorias significativas no site do NaHora, utilizando HTML, CSS, WordPress e Bootstrap, resultando em uma interface mais intuitiva e responsiva.",
     technologies: "HTML, CSS, WordPress, Bootstrap",
-    imageUrl: logoNahora,
+    imageUrl: logoNaHora,
     url: "https://www.nahora.df.gov.br/",
     createdBy: "company",
     companyName: "Secretaria de Justiça do Distrito Federal",
