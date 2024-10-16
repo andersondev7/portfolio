@@ -36,13 +36,13 @@ export const Nav = styled.nav<{ isOpen: boolean }>`
   @media (max-width: 768px) {
     flex-direction: column;
     background-color: rgba(0, 0, 0, 0.95);
-    position: absolute;
-    top: 70px;
+    position: fixed;
+    top: 0;
     left: 0;
     width: 100%;
-    height: calc(100vh - 70px);
+    height: 100vh;
     transform: ${({ isOpen }) =>
-      isOpen ? "translateX(0)" : "translateX(-100%)"};
+      isOpen ? "translateY(0)" : "translateY(-100%)"};
     transition: transform 0.3s ease-in-out;
     z-index: 10;
 
@@ -106,7 +106,7 @@ export const Hamburger = styled.div<{ isOpen: boolean }>`
 
     &:nth-child(1) {
       transform: ${({ isOpen }) =>
-        isOpen ? "rotate(45deg) translate(5px, 5px)" : "rotate(0)"};
+        isOpen ? "rotate(45deg) translate(10px, 10px)" : "rotate(0)"};
     }
 
     &:nth-child(2) {

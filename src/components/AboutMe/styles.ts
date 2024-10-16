@@ -5,11 +5,14 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
 
-  flex-wrap: wrap;
   margin: 0 auto;
   width: 100%;
   max-width: 1240px;
   gap: 10px;
+
+  @media screen and (max-width: 768px) {
+    flex-wrap: wrap;
+  }
 `;
 
 export const ProfilePicture = styled.img`

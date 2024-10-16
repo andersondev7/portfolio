@@ -14,6 +14,17 @@ import {
   TechBadge,
 } from "./styles";
 
+import logoAgendaDf from "../../assets/image/agendaDf.png";
+import logoNahora from "../../assets/image/nahora.png";
+import logoBbankingConveniencia from "../../assets/image/bbankingConveniencia.png";
+import logoBbankingFranquia from "../../assets/image/BbankingFranquia.png";
+import logoBbankingPagueTudo from "../../assets/image/BbankingPagueTudo.png";
+import logoBbanking from "../../assets/image/logoBbanking.png";
+import logoBbankingDash from "../../assets/image/logoBbankingDash.png";
+import logoBrightlync from "../../assets/image/Logobrightlync.png";
+import logoEnergyarray from "../../assets/image/logoEnergyarray.png";
+import logoTwella from "../../assets/image/logoTwella.png";
+
 interface Project {
   id: number;
   name: string;
@@ -75,7 +86,7 @@ const projectsData: Project[] = [
     description:
       "Conduzi testes rigorosos em ambiente de homologação no sistema do AgendaDF, assegurando a qualidade e a funcionalidade do sistema antes do lançamento, garantindo a satisfação dos usuários finais.",
     technologies: "Testes, Homologação",
-    imageUrl: "",
+    imageUrl: logoAgendaDf,
     url: "https://agenda.df.gov.br/",
     createdBy: "company",
     companyName: "Secretaria de Justiça do Distrito Federal",
@@ -86,47 +97,47 @@ const projectsData: Project[] = [
     description:
       "Efetuei ajustes e melhorias significativas no site do NaHora, utilizando HTML, CSS, WordPress e Bootstrap, resultando em uma interface mais intuitiva e responsiva.",
     technologies: "HTML, CSS, WordPress, Bootstrap",
-    imageUrl: "",
+    imageUrl: logoNahora,
     url: "https://www.nahora.df.gov.br/",
     createdBy: "company",
     companyName: "Secretaria de Justiça do Distrito Federal",
   },
   {
     id: 7,
-    name: "Landing Pages Bbanking",
+    name: "Landing Pages Bbanking - Conveniência",
     description: "Landing page feita em HTML, SCSS e JavaScript.",
     technologies: "HTML, SCSS, JavaScript",
-    imageUrl: "",
+    imageUrl: logoBbankingConveniencia,
     url: "https://conveniencia.bbanking.com.br/",
     createdBy: "company",
     companyName: "Bbanking",
   },
   {
     id: 7.1,
-    name: "Landing Page Franquia Bbanking",
+    name: "Landing Page Franquia Bbanking - Franquia",
     description: "Landing page feita em HTML, SCSS e JavaScript.",
     technologies: "HTML, SCSS, JavaScript",
-    imageUrl: "",
+    imageUrl: logoBbankingFranquia,
     url: "https://franquia.bbanking.com.br/",
     createdBy: "company",
     companyName: "Bbanking",
   },
   {
     id: 7.2,
-    name: "Landing Page Pagamento Bbanking",
+    name: "Landing Page Pagamento Bbanking - PagueTudo",
     description: "Landing page feita em HTML, SCSS e JavaScript.",
     technologies: "HTML, SCSS, JavaScript",
-    imageUrl: "",
+    imageUrl: logoBbankingPagueTudo,
     url: "https://paguetudo.bbanking.com.br/",
     createdBy: "company",
     companyName: "Bbanking",
   },
   {
     id: 7.3,
-    name: "Landing Page Bbanking",
+    name: "Landing Page Bbanking - Bbanking",
     description: "Landing page feita em HTML, SCSS e JavaScript.",
     technologies: "HTML, SCSS, JavaScript",
-    imageUrl: "",
+    imageUrl: logoBbanking,
     url: "https://bbanking.com.br/",
     createdBy: "company",
     companyName: "Bbanking",
@@ -136,7 +147,7 @@ const projectsData: Project[] = [
     name: "Bwallet Dashboard",
     description: "Dashboard feita em React + TypeScript.",
     technologies: "React, TypeScript",
-    imageUrl: "",
+    imageUrl: logoBbankingDash,
     url: "https://bwallet.com.br/",
     createdBy: "company",
     companyName: "Bbanking",
@@ -147,7 +158,7 @@ const projectsData: Project[] = [
     description:
       "Sistema de gerenciamento de gás feito utilizando React + TypeScript + GraphQL.",
     technologies: "React, TypeScript, GraphQL",
-    imageUrl: "",
+    imageUrl: logoBrightlync,
     url: "https://brightlync.vercel.app/auth/login",
     createdBy: "company",
     companyName: "Motion Applications",
@@ -158,7 +169,7 @@ const projectsData: Project[] = [
     description:
       "Sistema de gerenciamento de energia e gás feito em React + TypeScript e backend em Java.",
     technologies: "React, TypeScript, Java",
-    imageUrl: "",
+    imageUrl: logoEnergyarray,
     url: "https://energyarray.vercel.app/auth/login",
     createdBy: "company",
     companyName: "Motion Applications",
@@ -167,8 +178,8 @@ const projectsData: Project[] = [
     id: 11,
     name: "Extensão Twella",
     description: "Extensão Twella feita para Chrome e Safari.",
-    technologies: "JavaScript",
-    imageUrl: "",
+    technologies: "JavaScript, HTML, CSS, Manifest File, API Chrome",
+    imageUrl: logoTwella,
     url: "https://chromewebstore.google.com/detail/twella/lblidfjkplakdhnmbghmeomhbkakbcko",
     createdBy: "company",
     companyName: "Motion Applications",

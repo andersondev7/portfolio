@@ -13,7 +13,6 @@ export const ProjectList = styled.ul`
 export const ProjectItem = styled.li`
   background: #f9f9f9;
   color: #000;
-  border: 1px solid #ddd;
   border-radius: 8px;
   overflow: hidden;
   transition: transform 0.3s, box-shadow 0.3s;
@@ -96,6 +95,8 @@ export const ProjectLink = styled.a`
   border-radius: 5px;
   text-decoration: none;
   transition: background-color 0.3s;
+
+  text-align: center;
 
   &:hover {
     background-color: #8a0505;
