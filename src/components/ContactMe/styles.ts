@@ -75,6 +75,9 @@ export const ContainerForm = styled.div`
   }
 
   label {
+    display: flex;
+    gap: 20px;
+
     color: white;
     font-size: 14px;
   }
@@ -123,7 +126,7 @@ export const ContainerForm = styled.div`
 
   p {
     text-align: center;
-    color: #4caf50;
+    color: #e10909;
     font-weight: bold;
   }
 `;
