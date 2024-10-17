@@ -19,9 +19,10 @@ const App: React.FC = () => {
         <Router>
           <GlobalStyle />
           <Routes>
-            <Route path="/pt" element={<Home />} />
+            <Route path="/" element={<Home />} />
+            {/* <Route path="/pt" element={<Home />} />
             <Route path="/en" element={<Home />} />
-            <Route path="/" element={<Navigate to="/pt" />} />
+            <Route path="/" element={<Navigate to="/pt" />} /> */}
           </Routes>
         </Router>
       </LanguageProvider>
