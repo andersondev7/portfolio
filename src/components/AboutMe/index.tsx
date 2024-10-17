@@ -11,10 +11,10 @@ import {
   TextContainer,
   DownloadButton,
 } from "./styles";
-import { useTranslation } from "react-i18next"; // Importando useTranslation
+import { useTranslation } from "react-i18next";
 
 const AboutMe: React.FC = () => {
-  const { t } = useTranslation(); // Usando o hook para traduções
+  const { t } = useTranslation();
 
   return (
     <Container>

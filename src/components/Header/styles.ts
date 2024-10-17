@@ -21,10 +21,16 @@ export const Aside = styled.div`
   width: max-content;
 
   @media (max-width: 768px) {
-    position: fixed;
-    width: 90%;
+    position: static;
+    width: 100%;
+
+    transform: translateX(0%);
 
     background-color: transparent;
+
+    justify-content: start;
+
+    padding: 0;
   }
 `;
 

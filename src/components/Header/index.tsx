@@ -14,7 +14,9 @@ const Header: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsSticky(window.scrollY > 50);
+      if (window.innerWidth > 768) {
+        setIsSticky(window.scrollY > 50);
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -37,7 +39,9 @@ const Header: React.FC = () => {
           smooth={true}
           spy={true}
           activeClass="active"
-          onClick={() => setIsOpen(false)}
+          onClick={() => {
+            setIsOpen(false);
+          }}
         >
           {t("header.about")}
         </Link>
@@ -46,7 +50,9 @@ const Header: React.FC = () => {
           smooth={true}
           spy={true}
           activeClass="active"
-          onClick={() => setIsOpen(false)}
+          onClick={() => {
+            setIsOpen(false);
+          }}
         >
           {t("header.work")}
         </Link>
@@ -55,7 +61,9 @@ const Header: React.FC = () => {
           smooth={true}
           spy={true}
           activeClass="active"
-          onClick={() => setIsOpen(false)}
+          onClick={() => {
+            setIsOpen(false);
+          }}
         >
           {t("header.projects")}
         </Link>
@@ -64,7 +72,9 @@ const Header: React.FC = () => {
           smooth={true}
           spy={true}
           activeClass="active"
-          onClick={() => setIsOpen(false)}
+          onClick={() => {
+            setIsOpen(false);
+          }}
         >
           {t("header.skills")}
         </Link>
@@ -73,11 +83,13 @@ const Header: React.FC = () => {
           smooth={true}
           spy={true}
           activeClass="active"
-          onClick={() => setIsOpen(false)}
+          onClick={() => {
+            setIsOpen(false);
+          }}
         >
           {t("header.contact")}
         </Link>
-        <LanguageSelector />
+        {/* <LanguageSelector /> */}
       </Nav>
     </Aside>
   );

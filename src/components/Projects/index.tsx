@@ -41,47 +41,6 @@ type Filter = "all" | "self" | "company";
 
 const projectsData: Project[] = [
   {
-    id: 1,
-    name: "Teste Dev Junior - Legaplan",
-    description:
-      "Um projeto desenvolvido para criar, listar e deletar tarefas, fazendo armazenamento utilizando arquivo JSON.",
-    technologies: "NextJS, TypeScript, SASS",
-    imageUrl: "",
-    url: "https://github.com/andersona16/dev-junior-legaplan",
-    createdBy: "self",
-  },
-  {
-    id: 2,
-    name: "Junior Challenge",
-    description:
-      "Projeto para Criação de um CRUD (Create, Read, Update, Delete) para gerenciar os anéis e desenvolver um frontend para visualizar e manipular essas informações.",
-    technologies: "Frontend: React e TypeScript, Backend: com Node + Express",
-    imageUrl: "",
-    url: "https://github.com/andersona16/Junior-Challenge/tree/junior-challenge-anderson-araujo",
-    createdBy: "self",
-  },
-  {
-    id: 3,
-    name: "Frontend Cardápio Digital",
-    description:
-      "Uma aplicação de cardápio digital para restaurantes onde é possível listar, criar, deletar e atualizar produtos.",
-    technologies: "React + Typescript",
-    imageUrl: "",
-    url: "https://github.com/andersona16/frontend-cardapio-digital",
-    createdBy: "self",
-  },
-  {
-    id: 4,
-    name: "Backend Cardápio Digital",
-    description:
-      "Backend construído para suportar a aplicação de cardápio digital para criação de produtos e também tem opções para adicionar, listar, deletar e atualizar o produto.",
-    technologies: "Java + Spring Boot",
-    imageUrl: "",
-    url: "https://github.com/andersona16/backend-cardapio-digital",
-    createdBy: "self",
-  },
-
-  {
     id: 5,
     name: "AgendaDF",
     description:
@@ -204,6 +163,46 @@ const projectsData: Project[] = [
     url: "https://zona-admin-panel.vercel.app/",
     createdBy: "company",
     companyName: "Motion Applications",
+  },
+  {
+    id: 1,
+    name: "Teste Dev Junior - Legaplan",
+    description:
+      "Um projeto desenvolvido para criar, listar e deletar tarefas, fazendo armazenamento utilizando arquivo JSON.",
+    technologies: "NextJS, TypeScript, SASS",
+    imageUrl: "",
+    url: "https://github.com/andersona16/dev-junior-legaplan",
+    createdBy: "self",
+  },
+  {
+    id: 2,
+    name: "Junior Challenge",
+    description:
+      "Projeto para Criação de um CRUD (Create, Read, Update, Delete) para gerenciar os anéis e desenvolver um frontend para visualizar e manipular essas informações.",
+    technologies: "Frontend: React e TypeScript, Backend: com Node + Express",
+    imageUrl: "",
+    url: "https://github.com/andersona16/Junior-Challenge/tree/junior-challenge-anderson-araujo",
+    createdBy: "self",
+  },
+  {
+    id: 3,
+    name: "Frontend Cardápio Digital",
+    description:
+      "Uma aplicação de cardápio digital para restaurantes onde é possível listar, criar, deletar e atualizar produtos.",
+    technologies: "React + Typescript",
+    imageUrl: "",
+    url: "https://github.com/andersona16/frontend-cardapio-digital",
+    createdBy: "self",
+  },
+  {
+    id: 4,
+    name: "Backend Cardápio Digital",
+    description:
+      "Backend construído para suportar a aplicação de cardápio digital para criação de produtos e também tem opções para adicionar, listar, deletar e atualizar o produto.",
+    technologies: "Java + Spring Boot",
+    imageUrl: "",
+    url: "https://github.com/andersona16/backend-cardapio-digital",
+    createdBy: "self",
   },
 ];
 
