@@ -6,9 +6,12 @@ import {
   ContainerNetworks,
 } from "./styles";
 import { MdOutlineEmail } from "react-icons/md";
-import { Link } from "react-scroll"; // Importando Link do react-scroll
+import { Link } from "react-scroll";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   const iconsNetworks = [
     {
       id: 1,
@@ -28,19 +31,18 @@ const Footer = () => {
   ];
 
   const listInfo = [
-    { id: 1, label: "Sobre", link: "about" },
-    { id: 2, label: "Projetos", link: "projects" },
-    { id: 3, label: "Trabalhos", link: "work" },
-    { id: 4, label: "Habilidades", link: "skills" },
-    { id: 5, label: "Contato", link: "contact" },
+    { id: 1, label: t("header.about"), link: "about" },
+    { id: 3, label: t("header.work"), link: "work" },
+    { id: 2, label: t("header.projects"), link: "projects" },
+    { id: 4, label: t("header.skills"), link: "skills" },
+    { id: 5, label: t("header.contact"), link: "contact" },
   ];
 
   return (
     <Container>
       <ContainerMe>
         <h1>Anderson Araujo</h1>
-
-        <span>Desenvolvedor Full Stack</span>
+        <span>{t("about.experience")}</span>
       </ContainerMe>
 
       <ContainerListInfo>

@@ -1,10 +1,12 @@
+import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
-import { MdOutlineEmail } from "react-icons/md";
+import { useTranslation } from "react-i18next";
 import { FaArrowRight, FaLinkedin, FaWhatsapp } from "react-icons/fa";
+import { MdOutlineEmail } from "react-icons/md";
+import * as yup from "yup";
+
 import Title from "../Title/Title";
 import { CardContact, Container, ContainerCard, ContainerForm } from "./styles";
-import emailjs from "@emailjs/browser";
-import * as yup from "yup";
 
 const trustedDomains = [
   "gmail.com",
@@ -47,27 +49,29 @@ const ContactMe = () => {
   );
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
 
+  const { t } = useTranslation();
+
   const infoCards = [
     {
       id: 1,
       icon: <FaWhatsapp size={24} />,
-      label: "Whatsapp",
-      value: "+55 (61) 98466-3902",
-      link: "https://wa.me/5561984663902",
+      label: t("contactMe.whatsapp.label"),
+      value: t("contactMe.whatsapp.value"),
+      link: t("contactMe.whatsapp.link"),
     },
     {
       id: 2,
       icon: <MdOutlineEmail size={24} />,
-      label: "Email",
-      value: "andersonaraujoc1@gmail.com",
-      link: "mailto:andersonaraujoc1@gmail.com",
+      label: t("contactMe.email.label"),
+      value: t("contactMe.email.value"),
+      link: t("contactMe.email.link"),
     },
     {
       id: 3,
       icon: <FaLinkedin size={24} />,
-      label: "Linkedin",
-      value: "Anderson Araujo",
-      link: "https://linkedin.com/in/anderson-araujo",
+      label: t("contactMe.linkedin.label"),
+      value: t("contactMe.linkedin.value"),
+      link: t("contactMe.linkedin.link"),
     },
   ];
 
@@ -111,7 +115,7 @@ const ContactMe = () => {
 
   return (
     <>
-      <Title titleEn="CONTACT" titlePt="Contato" />
+      <Title titleEn={t("header.contact")} titlePt={t("header.contact")} />
 
       <Container>
         <ContainerCard>
@@ -122,7 +126,7 @@ const ContactMe = () => {
               <span>{item.value}</span>
 
               <a href={item.link} target="_blank" rel="noopener noreferrer">
-                Enviar mensagem <FaArrowRight size={14} />
+                {t("contactMe.send")} <FaArrowRight size={14} />
               </a>
             </CardContact>
           ))}
@@ -132,7 +136,7 @@ const ContactMe = () => {
           <form ref={form} onSubmit={sendEmail}>
             <div>
               <label htmlFor="name">
-                Nome
+                {t("contactMe.form.name")}
                 {errors.user_name && <p>{errors.user_name}</p>}
               </label>
               <input type="text" id="name" name="user_name" />
@@ -140,7 +144,7 @@ const ContactMe = () => {
 
             <div>
               <label htmlFor="email">
-                Email
+                {t("contactMe.form.email")}
                 {errors.user_email && <p>{errors.user_email}</p>}
               </label>
               <input type="email" id="email" name="user_email" />
@@ -148,7 +152,7 @@ const ContactMe = () => {
 
             <div>
               <label htmlFor="telefone">
-                Telefone
+                {t("contactMe.form.phone")}
                 {errors.user_telefone && <p>{errors.user_telefone}</p>}
               </label>
               <input type="tel" id="telefone" name="user_telefone" />
@@ -156,20 +160,22 @@ const ContactMe = () => {
 
             <div>
               <label htmlFor="message">
-                Mensagem
+                {t("contactMe.form.message")}
                 {errors.message && <p>{errors.message}</p>}
               </label>
               <textarea id="message" name="message" />
             </div>
 
             <button type="submit" disabled={status === "sending"}>
-              {status === "sending" ? "Enviando..." : "Enviar"}
+              {status === "sending"
+                ? t("contactMe.form.sending")
+                : t("contactMe.form.send")}
             </button>
 
             {status === "sent" && (
-              <p style={{ color: "green" }}>Email enviado com sucesso!</p>
+              <p style={{ color: "green" }}>{t("contactMe.form.sent")}</p>
             )}
-            {status === "error" && <p>Ocorreu um erro. Tente novamente.</p>}
+            {status === "error" && <p>{t("contactMe.form.error")}</p>}
           </form>
         </ContainerForm>
       </Container>

@@ -11,7 +11,7 @@ export const Container = styled.div`
 
   background-color: #16161d;
 
-  margin-top: 40px;
+  margin-top: 60px;
 
   @media screen and (max-width: 425px) {
     justify-content: center;
@@ -59,5 +59,9 @@ export const ContainerListInfo = styled.div`
     color: white;
     font-size: 14px;
     text-align: center;
+
+    &:hover { 
+      color: #a10606;
+    }
   }
 `;

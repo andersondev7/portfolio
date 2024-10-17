@@ -4,14 +4,27 @@ export const Aside = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: black;
-  width: 100%;
+  background-color: rgba(22, 22, 29, 0.8);
+  backdrop-filter: blur(4px);
+  margin: 0 auto;
+  margin-top: 10px;
+  padding: 10px 20px;
+  max-width: 1240px;
+  border-radius: 9999px;
 
-  margin-bottom: 40px;
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+
+  width: max-content;
 
   @media (max-width: 768px) {
-    flex-direction: row;
-    position: relative;
+    position: fixed;
+    width: 90%;
+
+    background-color: transparent;
   }
 `;
 
@@ -30,6 +43,13 @@ export const Nav = styled.nav<{ isOpen: boolean }>`
 
     &:hover {
       color: #a10606;
+    }
+
+    &.active {
+      background: #a10606;
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 10px;
     }
   }
 
@@ -50,43 +70,6 @@ export const Nav = styled.nav<{ isOpen: boolean }>`
       padding: 15px 0;
       font-size: 1.5rem;
     }
-  }
-`;
-
-export const ContainerImage = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50px;
-  height: 50px;
-  background-color: #a10606;
-  border-radius: 50%;
-
-  margin: 10px 20px;
-
-  > a {
-    font-size: 18px;
-    color: white;
-    font-weight: bold;
-  }
-
-  @media (max-width: 768px) {
-    width: 40px;
-    height: 40px;
-
-    > a {
-      font-size: 16px;
-    }
-  }
-`;
-
-export const IconContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  @media (max-width: 768px) {
-    margin-top: 10px;
   }
 `;
 
@@ -121,7 +104,6 @@ export const Hamburger = styled.div<{ isOpen: boolean }>`
 
   @media (max-width: 768px) {
     display: flex;
-
     padding: 0px 20px;
   }
 `;

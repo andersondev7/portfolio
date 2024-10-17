@@ -1,36 +1,61 @@
 {
-    "header": {
-      "about": "About",
-      "projects": "Projects",
-      "skills": "Skills",
-      "contact": "Contact"
+  "header": {
+    "about": "About Me",
+    "projects": "Projects",
+    "work": "Experience",
+    "skills": "Skills",
+    "contact": "Contact"
+  },
+  "about": {
+    "experience": "Full Stack Developer",
+    "title": "Hello, I'm Anderson",
+    "description": "I am a Full Stack Developer passionate about creating interactive and responsive interfaces. With a degree in Information Systems from Anhanguera Educacional, I have over 3 years of experience working with modern technologies such as ReactJS, TypeScript, JavaScript, NextJS, Redux, NodeJS, Express, MongoDB, and Docker.",
+    "contact": "Get in Touch",
+    "linkedin": {
+      "label": "LinkedIn",
+      "name": "Anderson Araujo"
     },
-    "main": {
-      "description": "And I am a full stack developer."
+    "whatsapp": {
+      "label": "WhatsApp",
+      "number": "+55 (61) 98466-3902"
     },
-    "about": {
-      "title": "About Me",
-      "description": "Here is a summary about me."
+    "email": {
+      "label": "Email",
+      "address": "andersonaraujoc1@gmail.com"
     },
-    "projects": {
-      "title": "Projects",
-      "project1": "Project 1",
-      "project1_description": "Description of Project 1.",
-      "project2": "Project 2",
-      "project2_description": "Description of Project 2."
+    "download": "Download Resume"
+  },
+  "experience": "Experience",
+  "projects": "Completed Projects",
+  "years": "3+ years",
+  "projectsCount": "10+ projects",
+  "contactMe": {
+    "title": "Contact",
+    "send": "Send message",
+    "whatsapp": {
+      "label": "WhatsApp",
+      "value": "+55 (61) 98466-3902",
+      "link": "https://wa.me/5561984663902"
     },
-    "skills": {
-      "title": "Skills",
-      "skill1": "Skill 1",
-      "skill2": "Skill 2",
-      "skill3": "Skill 3"
+    "email": {
+      "label": "Email",
+      "value": "andersonaraujoc1@gmail.com",
+      "link": "mailto:andersonaraujoc1@gmail.com"
     },
-    "contact": {
-      "title": "Contact",
-      "name": "Your Name",
-      "email": "Your Email",
-      "message": "Your Message",
-      "send": "Send"
+    "linkedin": {
+      "label": "LinkedIn",
+      "value": "Anderson Araujo",
+      "link": "https://linkedin.com/in/anderson-araujo"
+    },
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "message": "Message",
+      "send": "Send",
+      "sending": "Sending...",
+      "sent": "Email sent successfully!",
+      "error": "An error occurred. Please try again."
     }
   }
-  
+}

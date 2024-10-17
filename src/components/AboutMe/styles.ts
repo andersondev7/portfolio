@@ -6,9 +6,12 @@ export const Container = styled.div`
   justify-content: center;
 
   margin: 0 auto;
+
   width: 100%;
   max-width: 1240px;
   gap: 10px;
+
+  padding-top: 15rem;
 
   @media screen and (max-width: 768px) {
     flex-wrap: wrap;

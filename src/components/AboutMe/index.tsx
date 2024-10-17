@@ -1,5 +1,5 @@
 import React from "react";
-import { FaMedal, FaShoppingBag, FaWhatsapp, FaLinkedin } from "react-icons/fa"; // Importando o ícone do LinkedIn
+import { FaMedal, FaShoppingBag, FaWhatsapp, FaLinkedin } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 import {
   AboutText,
@@ -11,8 +11,11 @@ import {
   TextContainer,
   DownloadButton,
 } from "./styles";
+import { useTranslation } from "react-i18next"; // Importando useTranslation
 
 const AboutMe: React.FC = () => {
+  const { t } = useTranslation(); // Usando o hook para traduções
+
   return (
     <Container>
       <ProfilePicture
@@ -21,30 +24,24 @@ const AboutMe: React.FC = () => {
       />
       <TextContainer>
         <AboutText>
-          <h1>Olá, sou o Anderson</h1>
-          <p>
-            Sou um desenvolvedor Full Stack apaixonado por criar interfaces
-            interativas e responsivas. Com formação em Sistemas de Informação
-            pela Anhanguera Educacional, tenho mais de 3 anos de experiência
-            trabalhando com tecnologias modernas, como ReactJS, TypeScript,
-            JavaScript, NextJS, Redux, NodeJS, Express, MongoDB, Docker.
-          </p>
+          <h1>{t("about.title")}</h1>
+          <p>{t("about.description")}</p>
         </AboutText>
 
         <ContainerCard>
           <Card>
             <FaMedal size={24} color="#a10606" aria-hidden="true" />
-            <span>Experiência</span>
-            <span>3+ anos</span>
+            <span>{t("experience")}</span>
+            <span>{t("years")}</span>
           </Card>
           <Card>
             <FaShoppingBag size={24} color="#a10606" aria-hidden="true" />
-            <span>Projetos Finalizados</span>
-            <span>10+ projetos</span>
+            <span>{t("projects")}</span>
+            <span>{t("projectsCount")}</span>
           </Card>
         </ContainerCard>
 
-        <h2>Entre em Contato</h2>
+        <h2>{t("about.contact")}</h2>
         <div style={{ display: "flex", gap: "40px", flexWrap: "wrap" }}>
           <ContainerContact>
             <a
@@ -58,8 +55,8 @@ const AboutMe: React.FC = () => {
                 aria-label="LinkedIn"
               />
               <div>
-                <h1>LinkedIn</h1>
-                <p>Anderson Araujo</p>
+                <h1>{t("about.linkedin.label")}</h1>
+                <p>{t("about.linkedin.name")}</p>
               </div>
             </a>
           </ContainerContact>
@@ -75,8 +72,8 @@ const AboutMe: React.FC = () => {
                 aria-label="WhatsApp"
               />
               <div>
-                <h1>WhatsApp</h1>
-                <p>+55 (61) 98466-3902 </p>
+                <h1>{t("about.whatsapp.label")}</h1>
+                <p>{t("about.whatsapp.number")}</p>
               </div>
             </a>
           </ContainerContact>
@@ -88,8 +85,8 @@ const AboutMe: React.FC = () => {
                 aria-label="Email"
               />
               <div>
-                <h1>Email</h1>
-                <p>andersonaraujoc1@gmail.com</p>{" "}
+                <h1>{t("about.email.label")}</h1>
+                <p>{t("about.email.address")}</p>
               </div>
             </a>
           </ContainerContact>
@@ -101,7 +98,7 @@ const AboutMe: React.FC = () => {
             download
             style={{ textDecoration: "none", color: "white" }}
           >
-            Baixar Currículo
+            {t("about.download")}
           </a>
         </DownloadButton>
       </TextContainer>
