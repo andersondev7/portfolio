@@ -11,11 +11,12 @@ export const Select = styled.select`
   font-size: 1rem;
   color: white;
   display: block;
-  padding: 10px 0;
   text-decoration: none;
   transition: color 0.3s;
 
   cursor: pointer;
+
+  padding: 0px 0px 0px 20px;
 
   &:hover {
     color: ${({ theme }) => theme.toggleBorder};
