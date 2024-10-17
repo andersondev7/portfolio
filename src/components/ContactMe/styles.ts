@@ -125,7 +125,7 @@ export const ContainerForm = styled.div`
   }
 
   p {
-    text-align: center;
+    text-align: justify;
     color: #e10909;
     font-weight: bold;
   }

@@ -24,22 +24,50 @@ const trustedDomains = [
 ];
 
 const schema = yup.object().shape({
-  user_name: yup.string().required("Nome é obrigatório."),
+  user_name: yup.string().required({
+    pt: "Nome é obrigatório.",
+    en: "Name is required.",
+  }),
   user_email: yup
     .string()
-    .required("Email é obrigatório.")
-    .email("Email inválido.")
-    .test("valid-domain", "Adicione um e-mail válido.", (value) => {
-      if (!value) return true;
-      const domain = value.split("@")[1];
-      return trustedDomains.includes(domain);
-    }),
+    .required({
+      pt: "Email é obrigatório.",
+      en: "Email is required.",
+    })
+    .email({
+      pt: "Email inválido.",
+      en: "Invalid email.",
+    })
+    .test(
+      "valid-domain",
+      {
+        pt: "Adicione um e-mail válido.",
+        en: "Please provide a valid email.",
+      },
+      (value) => {
+        if (!value) return true;
+        const domain = value.split("@")[1];
+        return trustedDomains.includes(domain);
+      }
+    ),
   user_telefone: yup
     .string()
-    .required("Telefone é obrigatório.")
-    .matches(/^[0-9]*$/, "O telefone deve conter apenas números.")
-    .min(10, "O telefone deve ter pelo menos 10 dígitos."),
-  message: yup.string().required("Mensagem é obrigatória."),
+    .required({
+      pt: "Telefone é obrigatório.",
+      en: "Phone number is required.",
+    })
+    .matches(/^[0-9]*$/, {
+      pt: "O telefone deve conter apenas números.",
+      en: "Phone number must contain only numbers.",
+    })
+    .min(10, {
+      pt: "O telefone deve ter pelo menos 10 dígitos.",
+      en: "Phone number must be at least 10 digits long.",
+    }),
+  message: yup.string().required({
+    pt: "Mensagem é obrigatória.",
+    en: "Message is required.",
+  }),
 });
 
 const ContactMe = () => {
@@ -49,7 +77,7 @@ const ContactMe = () => {
   );
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
 
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const infoCards = [
     {
@@ -103,7 +131,11 @@ const ContactMe = () => {
       if (err instanceof yup.ValidationError) {
         const validationErrors: { [key: string]: string } = {};
         err.inner.forEach((error) => {
-          if (error.path) validationErrors[error.path] = error.message;
+          if (error.path) {
+            const lang = i18n.language;
+            validationErrors[error.path] =
+              error.message[lang] || error.message["en"];
+          }
         });
         setErrors(validationErrors);
       } else {

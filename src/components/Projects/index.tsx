@@ -1,11 +1,12 @@
-import React, { useState } from "react";
-
+import React, { useState, useEffect } from "react";
 import Title from "../Title/Title";
 import {
   Button,
   ButtonContainer,
   CompanyName,
+  ContainerButton,
   ContainerTechnologies,
+  CustomButton,
   ProjectDetails,
   ProjectImage,
   ProjectItem,
@@ -13,7 +14,6 @@ import {
   ProjectList,
   TechBadge,
 } from "./styles";
-
 import logoAgendaDf from "../../assets/image/agendaDf.png";
 import logoNaHora from "../../assets/image/nahora.png";
 import logoBbankingConveniencia from "../../assets/image/bbankingConveniencia.png";
@@ -22,9 +22,9 @@ import logoBbankingPagueTudo from "../../assets/image/BbankingPagueTudo.png";
 import logoBbanking from "../../assets/image/logoBbanking.png";
 import logoBbankingDash from "../../assets/image/logoBbankingDash.png";
 import logoBrightlync from "../../assets/image/logoBrightlync.png";
-
 import logoEnergyarray from "../../assets/image/logoEnergyarray.png";
 import logoTwella from "../../assets/image/logoT.png";
+import { useTranslation } from "react-i18next";
 
 interface Project {
   id: number;
@@ -39,177 +39,49 @@ interface Project {
 
 type Filter = "all" | "self" | "company";
 
-const projectsData: Project[] = [
-  {
-    id: 5,
-    name: "AgendaDF",
-    description:
-      "Conduzi testes rigorosos em ambiente de homologação no sistema do AgendaDF, assegurando a qualidade e a funcionalidade do sistema antes do lançamento, garantindo a satisfação dos usuários finais.",
-    technologies: "Testes, Homologação",
-    imageUrl: logoAgendaDf,
-    url: "https://agenda.df.gov.br/",
-    createdBy: "company",
-    companyName: "Secretaria de Justiça do Distrito Federal",
-  },
-  {
-    id: 6,
-    name: "Site do NaHora",
-    description:
-      "Efetuei ajustes e melhorias significativas no site do NaHora, utilizando HTML, CSS, WordPress e Bootstrap, resultando em uma interface mais intuitiva e responsiva.",
-    technologies: "HTML, CSS, WordPress, Bootstrap",
-    imageUrl: logoNaHora,
-    url: "https://www.nahora.df.gov.br/",
-    createdBy: "company",
-    companyName: "Secretaria de Justiça do Distrito Federal",
-  },
-  {
-    id: 7,
-    name: "Landing Pages Bbanking - Conveniência",
-    description: "Landing page feita em HTML, SCSS e JavaScript.",
-    technologies: "HTML, SCSS, JavaScript",
-    imageUrl: logoBbankingConveniencia,
-    url: "https://conveniencia.bbanking.com.br/",
-    createdBy: "company",
-    companyName: "Bbanking",
-  },
-  {
-    id: 7.1,
-    name: "Landing Page Franquia Bbanking - Franquia",
-    description: "Landing page feita em HTML, SCSS e JavaScript.",
-    technologies: "HTML, SCSS, JavaScript",
-    imageUrl: logoBbankingFranquia,
-    url: "https://franquia.bbanking.com.br/",
-    createdBy: "company",
-    companyName: "Bbanking",
-  },
-  {
-    id: 7.2,
-    name: "Landing Page Pagamento Bbanking - PagueTudo",
-    description: "Landing page feita em HTML, SCSS e JavaScript.",
-    technologies: "HTML, SCSS, JavaScript",
-    imageUrl: logoBbankingPagueTudo,
-    url: "https://paguetudo.bbanking.com.br/",
-    createdBy: "company",
-    companyName: "Bbanking",
-  },
-  {
-    id: 7.3,
-    name: "Landing Page Bbanking - Bbanking",
-    description: "Landing page feita em HTML, SCSS e JavaScript.",
-    technologies: "HTML, SCSS, JavaScript",
-    imageUrl: logoBbanking,
-    url: "https://bbanking.com.br/",
-    createdBy: "company",
-    companyName: "Bbanking",
-  },
-  {
-    id: 8,
-    name: "Bwallet Dashboard",
-    description: "Dashboard feita em React + TypeScript.",
-    technologies: "React, TypeScript",
-    imageUrl: logoBbankingDash,
-    url: "https://bwallet.com.br/",
-    createdBy: "company",
-    companyName: "Bbanking",
-  },
-  {
-    id: 9,
-    name: "Sistema de Gerenciamento de Gás",
-    description:
-      "Sistema de gerenciamento de gás feito utilizando React + TypeScript + GraphQL.",
-    technologies: "React, TypeScript, GraphQL",
-    imageUrl: logoBrightlync,
-    url: "https://brightlync.vercel.app/auth/login",
-    createdBy: "company",
-    companyName: "Motion Applications",
-  },
-  {
-    id: 10,
-    name: "Sistema de Gerenciamento de Energia e Gás",
-    description:
-      "Sistema de gerenciamento de energia e gás feito em React + TypeScript e backend em Java.",
-    technologies: "React, TypeScript, Java",
-    imageUrl: logoEnergyarray,
-    url: "https://energyarray.vercel.app/auth/login",
-    createdBy: "company",
-    companyName: "Motion Applications",
-  },
-  {
-    id: 11,
-    name: "Extensão Twella",
-    description: "Extensão Twella feita para Chrome e Safari.",
-    technologies: "JavaScript, HTML, CSS, Manifest File, API Chrome",
-    imageUrl: logoTwella,
-    url: "https://chromewebstore.google.com/detail/twella/lblidfjkplakdhnmbghmeomhbkakbcko",
-    createdBy: "company",
-    companyName: "Motion Applications",
-  },
-  {
-    id: 12,
-    name: "Zona Business",
-    description: "Zona Business feita em React + TypeScript.",
-    technologies: "React, TypeScript",
-    imageUrl: "",
-    url: "https://zona-business-panel.vercel.app/",
-    createdBy: "company",
-    companyName: "Motion Applications",
-  },
-  {
-    id: 13,
-    name: "Zona Admin",
-    description: "Zona Admin feita em React + TypeScript.",
-    technologies: "React, TypeScript",
-    imageUrl: "",
-    url: "https://zona-admin-panel.vercel.app/",
-    createdBy: "company",
-    companyName: "Motion Applications",
-  },
-  {
-    id: 1,
-    name: "Teste Dev Junior - Legaplan",
-    description:
-      "Um projeto desenvolvido para criar, listar e deletar tarefas, fazendo armazenamento utilizando arquivo JSON.",
-    technologies: "NextJS, TypeScript, SASS",
-    imageUrl: "",
-    url: "https://github.com/andersona16/dev-junior-legaplan",
-    createdBy: "self",
-  },
-  {
-    id: 2,
-    name: "Junior Challenge",
-    description:
-      "Projeto para Criação de um CRUD (Create, Read, Update, Delete) para gerenciar os anéis e desenvolver um frontend para visualizar e manipular essas informações.",
-    technologies: "Frontend: React e TypeScript, Backend: com Node + Express",
-    imageUrl: "",
-    url: "https://github.com/andersona16/Junior-Challenge/tree/junior-challenge-anderson-araujo",
-    createdBy: "self",
-  },
-  {
-    id: 3,
-    name: "Frontend Cardápio Digital",
-    description:
-      "Uma aplicação de cardápio digital para restaurantes onde é possível listar, criar, deletar e atualizar produtos.",
-    technologies: "React + Typescript",
-    imageUrl: "",
-    url: "https://github.com/andersona16/frontend-cardapio-digital",
-    createdBy: "self",
-  },
-  {
-    id: 4,
-    name: "Backend Cardápio Digital",
-    description:
-      "Backend construído para suportar a aplicação de cardápio digital para criação de produtos e também tem opções para adicionar, listar, deletar e atualizar o produto.",
-    technologies: "Java + Spring Boot",
-    imageUrl: "",
-    url: "https://github.com/andersona16/backend-cardapio-digital",
-    createdBy: "self",
-  },
-];
+const imageMap: Record<string, string> = {
+  logoAgendaDf,
+  logoNaHora,
+  logoBbankingConveniencia,
+  logoBbankingFranquia,
+  logoBbankingPagueTudo,
+  logoBbanking,
+  logoBbankingDash,
+  logoBrightlync,
+  logoTwella,
+  logoEnergyarray,
+};
 
 const Projects: React.FC = () => {
   const [filter, setFilter] = useState<Filter>("all");
+  const [visibleCount, setVisibleCount] = useState<number>(5); // Número de projetos visíveis inicialmente em mobile
+  const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth < 768); // Detecta se está em mobile
 
-  const filteredProjects = projectsData.filter((project) => {
+  const { t } = useTranslation();
+
+  const projectMe: Project[] = t("projectsMe", { returnObjects: true });
+
+  // Atualiza a quantidade de projetos visíveis e se está em mobile com base na largura da janela
+  useEffect(() => {
+    const handleResize = () => {
+      const mobile = window.innerWidth < 768;
+      setIsMobile(mobile);
+      if (!mobile) {
+        setVisibleCount(projectMe.length); // Mostra todos os projetos em desktop
+      } else {
+        setVisibleCount(5); // Reseta o contador para 5 em mobile
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize(); // Chama inicialmente para definir o estado correto
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [projectMe.length]);
+
+  const filteredProjects = projectMe.filter((project) => {
     switch (filter) {
       case "all":
         return true;
@@ -222,69 +94,95 @@ const Projects: React.FC = () => {
     }
   });
 
+  const handleShowMore = () => {
+    setVisibleCount((prevCount) => prevCount + 5); // Aumenta o número de projetos visíveis em mobile
+  };
+
   return (
     <>
-      <Title titleEn="PROJECTS" titlePt="Projetos" />
+      <Title titleEn={t("projects.title")} titlePt={t("projects.title")} />
+
       <ButtonContainer>
-        <Button active={filter === "all"} onClick={() => setFilter("all")}>
-          Todos os Projetos
+        <Button
+          active={filter === "all"}
+          onClick={() => {
+            setFilter("all");
+            setVisibleCount(isMobile ? 5 : projectMe.length);
+          }}
+        >
+          {t("projects.buttons.all")}
         </Button>
-        <Button active={filter === "self"} onClick={() => setFilter("self")}>
-          Projetos Feitos por Mim
+        <Button
+          active={filter === "self"}
+          onClick={() => {
+            setFilter("self");
+            setVisibleCount(isMobile ? 5 : projectMe.length);
+          }}
+        >
+          {t("projects.buttons.self")}
         </Button>
         <Button
           active={filter === "company"}
-          onClick={() => setFilter("company")}
+          onClick={() => {
+            setFilter("company");
+            setVisibleCount(isMobile ? 5 : projectMe.length);
+          }}
         >
-          Projetos que Participei nas Empresas
+          {t("projects.buttons.company")}
         </Button>
       </ButtonContainer>
 
       <ProjectList>
-        {filteredProjects.length > 0 ? (
-          filteredProjects.map((project) => (
-            <ProjectItem key={project.id}>
-              {project.imageUrl ? (
-                <ProjectImage src={project.imageUrl} />
-              ) : (
-                <ProjectImage
-                  src="https://via.placeholder.com/400x200.png?text=Sem+Imagem"
-                  alt="Imagem não disponível"
-                />
+        {filteredProjects.slice(0, visibleCount).map((project: Project) => (
+          <ProjectItem key={project.id}>
+            <ProjectImage
+              src={
+                imageMap[project.imageUrl] ||
+                `https://via.placeholder.com/400x200.png?text=${t(
+                  "projects.noImage"
+                )}`
+              }
+              alt={project.name}
+            />
+            <ProjectDetails>
+              <h1>{project.name}</h1>
+              {project.companyName && (
+                <CompanyName>
+                  <strong>{t("projects.company")}:</strong>{" "}
+                  {project.companyName}
+                </CompanyName>
               )}
-              <ProjectDetails>
-                <h1>{project.name}</h1>
-                {project.companyName && (
-                  <CompanyName>
-                    <strong>Empresa:</strong> {project.companyName}
-                  </CompanyName>
-                )}
-                <strong>Tecnologias utilizadas </strong>
-                <ContainerTechnologies>
-                  {project.technologies.split(", ").map((tech, index) => (
-                    <TechBadge key={index}>{tech}</TechBadge>
-                  ))}
-                </ContainerTechnologies>
-                <p>
-                  <strong>Descrição:</strong> {""}
-                  {project.description || "Sem descrição disponível"}
-                </p>
-                {project.url && (
-                  <ProjectLink
-                    href={project.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {project.createdBy === "self"
-                      ? "Ver código no GitHub"
-                      : "Acessar Projeto"}
-                  </ProjectLink>
-                )}
-              </ProjectDetails>
-            </ProjectItem>
-          ))
-        ) : (
-          <p>Nenhum projeto encontrado.</p>
+              <strong>{t("projects.technologies")}:</strong>
+              <ContainerTechnologies>
+                {project.technologies.split(", ").map((tech, index) => (
+                  <TechBadge key={index}>{tech}</TechBadge>
+                ))}
+              </ContainerTechnologies>
+              <p>
+                <strong>{t("projects.description")}:</strong>{" "}
+                {project.description || t("projects.noDescription")}
+              </p>
+              {project.url && (
+                <ProjectLink
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {project.createdBy === "self"
+                    ? t("projects.viewCode")
+                    : t("projects.accessProject")}
+                </ProjectLink>
+              )}
+            </ProjectDetails>
+          </ProjectItem>
+        ))}
+
+        {isMobile && visibleCount < filteredProjects.length && (
+          <ContainerButton>
+            <CustomButton onClick={handleShowMore}>
+              {t("projects.buttons.SeeMoreProjects")}
+            </CustomButton>
+          </ContainerButton>
         )}
       </ProjectList>
     </>

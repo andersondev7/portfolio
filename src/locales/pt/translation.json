@@ -25,9 +25,12 @@
     },
     "download": "Baixar Currículo"
   },
+  "skills": {
+    "title": "Habilidades"
+  },
   "experience": "Experiência",
-  "projects": "Projetos Finalizados",
   "years": "3+ anos",
+  "projectsFinish": "Projetos Finalizados",
   "projectsCount": "10+ projetos",
   "contactMe": {
     "title": "Contato",
@@ -57,5 +60,281 @@
       "sent": "Email enviado com sucesso!",
       "error": "Ocorreu um erro. Tente novamente."
     }
-  }
+  },
+  "experiences": [
+    {
+      "position": "Estagiário de TI",
+      "company": "Secretaria de Justiça do Distrito Federal",
+      "period": "mar de 2020 - mar de 2022 · 2 anos 1 mês",
+      "location": "Brasília, Distrito Federal, Brasil · Presencial",
+      "description": [
+        "Efetuei ajustes e melhorias significativas no site do NaHora, utilizando HTML, CSS, WordPress e Bootstrap.",
+        "Participei ativamente de revisões de código e reuniões de projeto, contribuindo para a adoção de melhores práticas e metodologias ágeis como Kanban e Scrum.",
+        "Conduzi testes rigorosos em ambiente de homologação no sistema do AgendaDF."
+      ],
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "WordPress",
+        "Bootstrap",
+        "Kanban",
+        "Scrum"
+      ]
+    },
+    {
+      "position": "Desenvolvedor Front End",
+      "company": "Bbanking",
+      "period": "jan de 2021 - set de 2022 · 1 ano 9 meses",
+      "location": "Brasília, Distrito Federal, Brasil · Híbrida",
+      "description": [
+        "Desenvolvimento de dashboards interativos utilizando ReactJS e TypeScript, proporcionando uma análise de dados eficiente e visualmente atraente.",
+        "Criação de Landing Pages altamente funcionais e responsivas com HTML, CSS e JavaScript, melhorando a conversão e a experiência do usuário.",
+        "Integração com bancos de dados relacionais e não-relacionais, incluindo Postgres, MySQL e MongoDB.",
+        "Colaboração eficaz com equipes de back-end utilizando NodeJS.",
+        "Gerenciamento de versionamento de código com Git e GitHub."
+      ],
+      "technologies": [
+        "React",
+        "TypeScript",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "SCSS",
+        "NodeJS",
+        "Express",
+        "Postgres",
+        "MySQL",
+        "MongoDB",
+        "Git",
+        "GitHub",
+        "GitFlow",
+        "Styled Components",
+        "Tailwind CSS"
+      ]
+    },
+    {
+      "position": "Desenvolvedor Front End",
+      "company": "TeamSoft Tecnologia e Sistemas",
+      "period": "set de 2022 - jun de 2023 · 10 meses",
+      "location": "Rio de Janeiro, Brasil · Remota",
+      "description": [
+        "Implementei novas funcionalidades e interfaces de usuário usando React e TypeScript, melhorando assim a experiência geral do usuário.",
+        "Participei ativamente de revisões de código e reuniões de projeto, contribuindo para a adoção de melhores práticas e metodologias ágeis como Scrum.",
+        "Implementação de sistemas para empresas como Domino's Pizza e Globo."
+      ],
+      "technologies": [
+        "React",
+        "TypeScript",
+        "Redux",
+        "Styled Components",
+        "Git",
+        "GitHub",
+        "GitFlow",
+        "CSS/SCSS",
+        "Scrum"
+      ]
+    },
+    {
+      "position": "Desenvolvedor Front End",
+      "company": "Motion Applications",
+      "period": "out de 2022 - jul de 2024 · 1 ano 10 meses",
+      "location": "Estoril, Lisboa, Portugal · Remota",
+      "description": [
+        "Desenvolvimento de Software: Projetar, desenvolver e manter aplicações webs utilizando tecnologias como React, TypeScript, JavaScript, APIs RESTFUL e outras tecnologias relevantes.",
+        "Colaboração em Equipe: Trabalhar de perto com equipes de design e back-end para entregar soluções completas e eficientes, garantindo uma experiência de usuário excelente.",
+        "Boas Práticas de Programação: Implementar e seguir boas práticas de programação, incluindo SOLID, Clean Code, e metodologias ágeis como Scrum e Kanban.",
+        "Gerenciamento de Estado e Hooks: Utilizar Context API para gerenciamento de estado, além de implementar hooks como useState, useEffect, e customHooks.",
+        "Responsividade e Design: Desenvolver interfaces responsivas e acessíveis para proporcionar uma experiência de usuário consistente em diferentes dispositivos."
+      ],
+      "technologies": [
+        "React",
+        "TypeScript",
+        "JavaScript",
+        "APIs RESTFUL",
+        "HTML5",
+        "CSS3",
+        "Clean Code",
+        "Context API",
+        "Git",
+        "Scrum",
+        "Kanban"
+      ]
+    }
+  ],
+  "projects": {
+    "title": "Projetos",
+    "buttons": {
+      "SeeMoreProjects": "Ver mais projetos",
+      "all": "Todos os projetos",
+      "self": "Projetos feitos por mim",
+      "company": "Projetos em que participei em empresas"
+    },
+    "company": "Empresa",
+    "technologies": "Tecnologias",
+    "description": "Descrição",
+    "noDescription": "Nenhuma descrição disponível.",
+    "viewCode": "Ver código",
+    "accessProject": "Acessar projeto",
+    "noProjects": "Nenhum projeto disponível no momento.",
+    "noImage": "Nenhuma imagem disponível"
+  },
+  "projectsMe": [
+    {
+      "id": 5,
+      "name": "AgendaDF",
+      "description": "Conduzi testes rigorosos em ambiente de homologação no sistema do AgendaDF, assegurando a qualidade e a funcionalidade do sistema antes do lançamento, garantindo a satisfação dos usuários finais.",
+      "technologies": "Testes, Homologação",
+      "imageUrl": "logoAgendaDf",
+      "url": "https://agenda.df.gov.br/",
+      "createdBy": "company",
+      "companyName": "Secretaria de Justiça do Distrito Federal"
+    },
+    {
+      "id": 6,
+      "name": "Site do NaHora",
+      "description": "Efetuei ajustes e melhorias significativas no site do NaHora, utilizando HTML, CSS, WordPress e Bootstrap, resultando em uma interface mais intuitiva e responsiva.",
+      "technologies": "HTML, CSS, WordPress, Bootstrap",
+      "imageUrl": "logoNaHora",
+      "url": "https://www.nahora.df.gov.br/",
+      "createdBy": "company",
+      "companyName": "Secretaria de Justiça do Distrito Federal"
+    },
+    {
+      "id": 7,
+      "name": "Landing Pages Bbanking - Conveniência",
+      "description": "Landing page feita em HTML, SCSS e JavaScript.",
+      "technologies": "HTML, SCSS, JavaScript",
+      "imageUrl": "logoBbankingConveniencia",
+      "url": "https://conveniencia.bbanking.com.br/",
+      "createdBy": "company",
+      "companyName": "Bbanking"
+    },
+    {
+      "id": 7.1,
+      "name": "Landing Page Franquia Bbanking - Franquia",
+      "description": "Landing page feita em HTML, SCSS e JavaScript.",
+      "technologies": "HTML, SCSS, JavaScript",
+      "imageUrl": "logoBbankingFranquia",
+      "url": "https://franquia.bbanking.com.br/",
+      "createdBy": "company",
+      "companyName": "Bbanking"
+    },
+    {
+      "id": 7.2,
+      "name": "Landing Page Pagamento Bbanking - PagueTudo",
+      "description": "Landing page feita em HTML, SCSS e JavaScript.",
+      "technologies": "HTML, SCSS, JavaScript",
+      "imageUrl": "logoBbankingPagueTudo",
+      "url": "https://paguetudo.bbanking.com.br/",
+      "createdBy": "company",
+      "companyName": "Bbanking"
+    },
+    {
+      "id": 7.3,
+      "name": "Landing Page Bbanking - Bbanking",
+      "description": "Landing page feita em HTML, SCSS e JavaScript.",
+      "technologies": "HTML, SCSS, JavaScript",
+      "imageUrl": "logoBbanking",
+      "url": "https://bbanking.com.br/",
+      "createdBy": "company",
+      "companyName": "Bbanking"
+    },
+    {
+      "id": 8,
+      "name": "Bwallet Dashboard",
+      "description": "Dashboard feita em React + TypeScript.",
+      "technologies": "React, TypeScript",
+      "imageUrl": "logoBbankingDash",
+      "url": "https://bwallet.com.br/",
+      "createdBy": "company",
+      "companyName": "Bbanking"
+    },
+    {
+      "id": 9,
+      "name": "Sistema de Gerenciamento de Gás",
+      "description": "Sistema de gerenciamento de gás feito utilizando React + TypeScript + GraphQL.",
+      "technologies": "React, TypeScript, GraphQL",
+      "imageUrl": "logoBrightlync",
+      "url": "https://brightlync.vercel.app/auth/login",
+      "createdBy": "company",
+      "companyName": "Motion Applications"
+    },
+    {
+      "id": 10,
+      "name": "Sistema de Gerenciamento de Energia e Gás",
+      "description": "Sistema de gerenciamento de energia e gás feito com React + TypeScript e um backend em Java.",
+      "technologies": "React, TypeScript, Java",
+      "imageUrl": "logoEnergyarray",
+      "url": "https://energyarray.vercel.app/auth/login",
+      "createdBy": "company",
+      "companyName": "Motion Applications"
+    },
+    {
+      "id": 11,
+      "name": "Extensão Twella",
+      "description": "Extensão Twella feita para Chrome e Safari.",
+      "technologies": "JavaScript, HTML, CSS, Manifest File, Chrome API",
+      "imageUrl": "logoTwella",
+      "url": "https://chromewebstore.google.com/detail/twella/lblidfjkplakdhnmbghmeomhbkakbcko",
+      "createdBy": "company",
+      "companyName": "Motion Applications"
+    },
+    {
+      "id": 12,
+      "name": "Business Zone",
+      "description": "Business Zone feita com React + TypeScript.",
+      "technologies": "React, TypeScript",
+      "imageUrl": "",
+      "url": "https://zona-business-panel.vercel.app/",
+      "createdBy": "company",
+      "companyName": "Motion Applications"
+    },
+    {
+      "id": 13,
+      "name": "Admin Zone",
+      "description": "Admin Zone feita com React + TypeScript.",
+      "technologies": "React, TypeScript",
+      "imageUrl": "",
+      "url": "https://zona-admin-panel.vercel.app/",
+      "createdBy": "company",
+      "companyName": "Motion Applications"
+    },
+    {
+      "id": 1,
+      "name": "Teste Junior Dev - Legaplan",
+      "description": "Um projeto desenvolvido para criar, listar e excluir tarefas, armazenando dados usando um arquivo JSON.",
+      "technologies": "NextJS, TypeScript, SASS",
+      "imageUrl": "",
+      "url": "https://github.com/andersona16/dev-junior-legaplan",
+      "createdBy": "self"
+    },
+    {
+      "id": 2,
+      "name": "Desafio Junior",
+      "description": "Projeto para criar um CRUD (Criar, Ler, Atualizar, Deletar) para gerenciar anéis e desenvolver um frontend para visualizar e manipular essa informação.",
+      "technologies": "Frontend: React e TypeScript, Backend: Node + Express",
+      "imageUrl": "",
+      "url": "https://github.com/andersona16/Junior-Challenge/tree/junior-challenge-anderson-araujo",
+      "createdBy": "self"
+    },
+    {
+      "id": 3,
+      "name": "Frontend Cardápio Digital",
+      "description": "Uma aplicação de cardápio digital para restaurantes onde é possível listar, criar, excluir e atualizar produtos.",
+      "technologies": "React + TypeScript",
+      "imageUrl": "",
+      "url": "https://github.com/andersona16/frontend-cardapio-digital",
+      "createdBy": "self"
+    },
+    {
+      "id": 4,
+      "name": "Backend Cardápio Digital",
+      "description": "Backend feito para suportar a aplicação de cardápio digital para criação de produtos e também tem opções para adicionar, listar, excluir e atualizar produtos.",
+      "technologies": "Java + Spring Boot",
+      "imageUrl": "",
+      "url": "https://github.com/andersona16/backend-cardapio-digital",
+      "createdBy": "self"
+    }
+  ]
 }

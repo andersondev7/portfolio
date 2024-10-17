@@ -8,6 +8,7 @@ import {
   SkillItem,
   SkillName,
 } from "./styles";
+import { useTranslation } from "react-i18next";
 
 const skills = [
   {
@@ -93,9 +94,11 @@ const skills = [
 ];
 
 const SkillsCarousel: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <>
-      <Title titleEn="SKILLS" titlePt="Habilidades" />
+      <Title titleEn={t("skills.title")} titlePt={t("skills.title")} />
 
       <CarouselContainer>
         <CarouselWrapper>

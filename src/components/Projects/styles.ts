@@ -8,6 +8,10 @@ export const ProjectList = styled.ul`
   margin: 0 auto;
 
   padding: 0px 40px;
+
+  @media screen and (max-width: 320px) {
+    padding: 10px;
+  }
 `;
 
 export const ProjectItem = styled.li`
@@ -116,4 +120,21 @@ export const TechBadge = styled.span`
   display: inline-block;
   font-size: 0.9em;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+`;
+
+export const ContainerButton = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const CustomButton = styled.button`
+  background-color: #a10606;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 20px 40px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
 `;

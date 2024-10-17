@@ -36,7 +36,7 @@ const AboutMe: React.FC = () => {
           </Card>
           <Card>
             <FaShoppingBag size={24} color="#a10606" aria-hidden="true" />
-            <span>{t("projects")}</span>
+            <span>{t("projectsFinish")}</span>
             <span>{t("projectsCount")}</span>
           </Card>
         </ContainerCard>

@@ -89,7 +89,7 @@ const Header: React.FC = () => {
         >
           {t("header.contact")}
         </Link>
-        {/* <LanguageSelector /> */}
+        <LanguageSelector />
       </Nav>
     </Aside>
   );
