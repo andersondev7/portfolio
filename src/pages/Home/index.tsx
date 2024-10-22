@@ -1,6 +1,6 @@
 import React from "react";
 
-import ContactMe from "../../components/ContactMe/inedx";
+import ContactMe from "../../components/ContactMe/index";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import { Container } from "./styles";
