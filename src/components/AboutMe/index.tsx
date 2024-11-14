@@ -19,7 +19,7 @@ const AboutMe: React.FC = () => {
   return (
     <Container>
       <ProfilePicture
-        src="https://media.licdn.com/dms/image/v2/D4D03AQGjIgacYjpcsQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1687206189001?e=1734566400&v=beta&t=-LK3sm5EVCcy75FPkcK8kb4_GVVpGs5jQdsoN9V_J2Q"
+        src="https://media.licdn.com/dms/image/v2/D4D03AQEH33EJbgKz4g/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1730738974264?e=1736985600&v=beta&t=w2hG1zFvAbySm0qMUcCHFtueTxIF10VdTCdKFOMZDYg"
         alt="Me"
       />
       <TextContainer>
