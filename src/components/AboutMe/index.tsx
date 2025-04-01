@@ -12,7 +12,7 @@ import {
   DownloadButton,
 } from "./styles";
 import { useTranslation } from "react-i18next";
-import photo  from '../../assets/image/photo.png';
+import photo from "../../assets/image/photo.jpg";
 
 const AboutMe: React.FC = () => {
   const { t } = useTranslation();
