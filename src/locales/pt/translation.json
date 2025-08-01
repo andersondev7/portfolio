@@ -306,7 +306,7 @@
       "description": "Um projeto desenvolvido para criar, listar e excluir tarefas, armazenando dados usando um arquivo JSON.",
       "technologies": "NextJS, TypeScript, SASS",
       "imageUrl": "",
-      "url": "https://github.com/andersona16/dev-junior-legaplan",
+      "url": "https://github.com/andersondev7/dev-junior-legaplan",
       "createdBy": "self"
     },
     {
@@ -315,7 +315,7 @@
       "description": "Projeto para criar um CRUD (Criar, Ler, Atualizar, Deletar) para gerenciar anéis e desenvolver um frontend para visualizar e manipular essa informação.",
       "technologies": "Frontend: React e TypeScript, Backend: Node + Express",
       "imageUrl": "",
-      "url": "https://github.com/andersona16/Junior-Challenge/tree/junior-challenge-anderson-araujo",
+      "url": "https://github.com/andersondev7/Junior-Challenge/tree/junior-challenge-anderson-araujo",
       "createdBy": "self"
     },
     {
@@ -324,7 +324,7 @@
       "description": "Uma aplicação de cardápio digital para restaurantes onde é possível listar, criar, excluir e atualizar produtos.",
       "technologies": "React + TypeScript",
       "imageUrl": "",
-      "url": "https://github.com/andersona16/frontend-cardapio-digital",
+      "url": "https://github.com/andersondev7/frontend-cardapio-digital",
       "createdBy": "self"
     },
     {
@@ -333,7 +333,7 @@
       "description": "Backend feito para suportar a aplicação de cardápio digital para criação de produtos e também tem opções para adicionar, listar, excluir e atualizar produtos.",
       "technologies": "Java + Spring Boot",
       "imageUrl": "",
-      "url": "https://github.com/andersona16/backend-cardapio-digital",
+      "url": "https://github.com/andersondev7/backend-cardapio-digital",
       "createdBy": "self"
     }
   ]

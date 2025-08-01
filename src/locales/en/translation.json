@@ -306,7 +306,7 @@
       "description": "A project developed to create, list, and delete tasks, storing data using a JSON file.",
       "technologies": "NextJS, TypeScript, SASS",
       "imageUrl": "",
-      "url": "https://github.com/andersona16/dev-junior-legaplan",
+      "url": "https://github.com/andersondev7/dev-junior-legaplan",
       "createdBy": "self"
     },
     {
@@ -315,7 +315,7 @@
       "description": "Project to create a CRUD (Create, Read, Update, Delete) to manage rings and develop a frontend to visualize and manipulate this information.",
       "technologies": "Frontend: React and TypeScript, Backend: Node + Express",
       "imageUrl": "",
-      "url": "https://github.com/andersona16/Junior-Challenge/tree/junior-challenge-anderson-araujo",
+      "url": "https://github.com/andersondev7/Junior-Challenge/tree/junior-challenge-anderson-araujo",
       "createdBy": "self"
     },
     {
@@ -324,7 +324,7 @@
       "description": "A digital menu application for restaurants where it is possible to list, create, delete, and update products.",
       "technologies": "React + TypeScript",
       "imageUrl": "",
-      "url": "https://github.com/andersona16/frontend-cardapio-digital",
+      "url": "https://github.com/andersondev7/frontend-cardapio-digital",
       "createdBy": "self"
     },
     {
@@ -333,7 +333,7 @@
       "description": "Backend built to support the digital menu application for creating products and also has options to add, list, delete, and update products.",
       "technologies": "Java + Spring Boot",
       "imageUrl": "",
-      "url": "https://github.com/andersona16/backend-cardapio-digital",
+      "url": "https://github.com/andersondev7/backend-cardapio-digital",
       "createdBy": "self"
     }
   ]
