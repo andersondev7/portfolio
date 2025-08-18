@@ -7,6 +7,7 @@ import * as yup from "yup";
 
 import Title from "../Title/Title";
 import { CardContact, Container, ContainerCard, ContainerForm } from "./styles";
+import InputMask from "react-input-mask";
 
 import i18n from "i18next";
 
@@ -30,6 +31,10 @@ const msg = (pt: string, en: string) => (i18n.language === "pt" ? pt : en);
 const schema = yup.object().shape({
   user_name: yup
     .string()
+    .matches(
+      /^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/,
+      msg("Use apenas letras.", "Only letters allowed.")
+    )
     .required(msg("Nome é obrigatório.", "Name is required.")),
 
   user_email: yup
@@ -48,7 +53,7 @@ const schema = yup.object().shape({
 
   user_telefone: yup
     .string()
-    .transform((value) => value.replace(/\D/g, ""))
+    .transform((value) => value.replace(/\D/g, "")) // remove máscara
     .required(msg("Telefone é obrigatório.", "Phone number is required."))
     .test(
       "len",
@@ -166,7 +171,21 @@ const ContactMe = () => {
                 {t("contactMe.form.name")}
                 {errors.user_name && <p>{errors.user_name}</p>}
               </label>
-              <input type="text" id="name" name="user_name" />
+              <InputMask maskPlaceholder={null} id="name" name="user_name">
+                {(inputProps: React.InputHTMLAttributes<HTMLInputElement>) => (
+                  <input
+                    {...inputProps}
+                    type="text"
+                    onInput={(e: React.FormEvent<HTMLInputElement>) => {
+                      const target = e.currentTarget;
+                      target.value = target.value.replace(
+                        /[^A-Za-zÀ-ÖØ-öø-ÿ\s]/g,
+                        ""
+                      );
+                    }}
+                  />
+                )}
+              </InputMask>
             </div>
 
             <div>
@@ -182,7 +201,16 @@ const ContactMe = () => {
                 {t("contactMe.form.phone")}
                 {errors.user_telefone && <p>{errors.user_telefone}</p>}
               </label>
-              <input type="tel" id="telefone" name="user_telefone" />
+              <InputMask
+                mask="(99) 99999-9999"
+                placeholder="(99) 99999-9999"
+                id="telefone"
+                name="user_telefone"
+              >
+                {(inputProps: React.InputHTMLAttributes<HTMLInputElement>) => (
+                  <input {...inputProps} />
+                )}
+              </InputMask>
             </div>
 
             <div>
