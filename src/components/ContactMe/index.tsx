@@ -8,6 +8,8 @@ import * as yup from "yup";
 import Title from "../Title/Title";
 import { CardContact, Container, ContainerCard, ContainerForm } from "./styles";
 
+import i18n from "i18next";
+
 const trustedDomains = [
   "gmail.com",
   "outlook.com",
@@ -23,51 +25,46 @@ const trustedDomains = [
   "me.com",
 ];
 
+const msg = (pt: string, en: string) => (i18n.language === "pt" ? pt : en);
+
 const schema = yup.object().shape({
-  user_name: yup.string().required({
-    pt: "Nome é obrigatório.",
-    en: "Name is required.",
-  }),
+  user_name: yup
+    .string()
+    .required(msg("Nome é obrigatório.", "Name is required.")),
+
   user_email: yup
     .string()
-    .required({
-      pt: "Email é obrigatório.",
-      en: "Email is required.",
-    })
-    .email({
-      pt: "Email inválido.",
-      en: "Invalid email.",
-    })
+    .required(msg("Email é obrigatório.", "Email is required."))
+    .email(msg("Email inválido.", "Invalid email."))
     .test(
       "valid-domain",
-      {
-        pt: "Adicione um e-mail válido.",
-        en: "Please provide a valid email.",
-      },
+      msg("Adicione um e-mail válido.", "Please provide a valid email."),
       (value) => {
         if (!value) return true;
         const domain = value.split("@")[1];
         return trustedDomains.includes(domain);
       }
     ),
+
   user_telefone: yup
     .string()
-    .required({
-      pt: "Telefone é obrigatório.",
-      en: "Phone number is required.",
-    })
-    .matches(/^[0-9]*$/, {
-      pt: "O telefone deve conter apenas números.",
-      en: "Phone number must contain only numbers.",
-    })
-    .min(10, {
-      pt: "O telefone deve ter pelo menos 10 dígitos.",
-      en: "Phone number must be at least 10 digits long.",
-    }),
-  message: yup.string().required({
-    pt: "Mensagem é obrigatória.",
-    en: "Message is required.",
-  }),
+    .transform((value) => value.replace(/\D/g, ""))
+    .required(msg("Telefone é obrigatório.", "Phone number is required."))
+    .test(
+      "len",
+      msg(
+        "O telefone deve ter 10 ou 11 dígitos.",
+        "Phone number must be 10 or 11 digits."
+      ),
+      (value) => {
+        if (!value) return false;
+        return value.length === 10 || value.length === 11;
+      }
+    ),
+
+  message: yup
+    .string()
+    .required(msg("Mensagem é obrigatória.", "Message is required.")),
 });
 
 const ContactMe = () => {
@@ -77,7 +74,7 @@ const ContactMe = () => {
   );
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
 
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   const infoCards = [
     {
@@ -132,9 +129,7 @@ const ContactMe = () => {
         const validationErrors: { [key: string]: string } = {};
         err.inner.forEach((error) => {
           if (error.path) {
-            const lang = i18n.language;
-            validationErrors[error.path] =
-              error.message[lang] || error.message["en"];
+            validationErrors[error.path] = error.message;
           }
         });
         setErrors(validationErrors);
